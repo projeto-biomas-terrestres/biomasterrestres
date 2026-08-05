@@ -1,106 +1,257 @@
-*{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f2faf3;
-        color: #333;
-    }
-
-    .banner {
-        position: relative;
-    }
-
-    .banner img {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-    }
-
-    .titulo {
-        position: absolute;
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        color: white;
-        background: rgba(0, 0, 0, 0.45);
-        padding: 20px 35px;
-        border-radius: 15px;
-    }
-
-    .titulo h1 {
-        font-size: 2.8rem;
-        margin-bottom: 10px;
-    }
-
-    .titulo p {
-        font-size: 1.1rem;
-    }
-
-    main {
-        display: flex;
-        justify-content: center;
-        margin-top: -40px;
-        margin-bottom: 50px;
-    }
-
-    .informacoes {
-        background: white;
-        width: 90%;
-        max-width: 850px;
-        padding: 35px;
-        border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    .informacoes h2 {
-        color: #2e7d32;
-        margin-bottom: 15px;
-    }
-
-    .informacoes p {
-        line-height: 1.8;
-        text-align: justify;
-    }
-
-    .botoes {
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-        margin-top: 30px;
-        flex-wrap: wrap;
-    }
-
-    .btn {
-        border-radius: 30px !important;
-        padding: 10px 28px !important;
-    }
-
-    .voltar {
-        display: block;
-        width: 180px;
-        margin: 35px auto 0;
-    }
-
-    @media (max-width: 768px) {
-        .banner img {
-            height: 250px;
+/* Estilo base com fonte fofa e fundo bege/creme bem suave */
+        body {
+            font-family: 'Fredoka', cursive, sans-serif;
+            color: #4a5568;
+            background-color: #fcf8f2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
         }
 
-        .titulo {
-            width: 90%;
-            padding: 15px;
-        }
-
-        .titulo h1 {
-            font-size: 2rem;
+        /* Container principal centralizado estilo "card fofinho" */
+        main {
+            width: 100%;
+            max-width: 580px;
+            margin: auto;
         }
 
         .informacoes {
-            width: 95%;
+            background: #ffffff;
+            padding: 3rem 2.5rem;
+            border-radius: 32px;
+            box-shadow: 0 12px 30px rgba(180, 160, 140, 0.12);
+            border: 2px solid #f3ebe1;
         }
-    }
+
+        /* --- BOTÕES FOFO EM TONS PASTÉIS SUTIS --- */
+        .btn-modal-custom {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease-in-out;
+            text-decoration: none;
+        }
+
+        /* Botão 1: Verde Menta Pastel (Sem neon) */
+        .btn-conhecer {
+            background-color: #d8f3dc;
+            color: #2d6a4f;
+        }
+
+        .btn-conhecer:hover {
+            background-color: #b7e4c7;
+            color: #1b4332;
+            transform: scale(1.04);
+        }
+
+        /* Botão 2: Bege/Areia Murcho e Doce */
+        .btn-localizacao {
+            background-color: #fbeee0;
+            color: #7f5539;
+        }
+
+        .btn-localizacao:hover {
+            background-color: #ede0d4;
+            color: #523a28;
+            transform: scale(1.04);
+        }
+
+        /* Efeito fofo no ícone */
+        .btn-modal-custom .btn-icon {
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-modal-custom:hover .btn-icon {
+            transform: rotate(12deg) scale(1.2);
+        }
+
+        /* Botão Voltar discreto */
+        .btn-voltar {
+            display: inline-block;
+            color: #a0aec0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .btn-voltar:hover {
+            color: #718096;
+        }
+
+        /* --- MODAL LATERAL FOFO (DRAWER) --- */
+        .modal.drawer-right .modal-dialog {
+            position: fixed;
+            margin: 0;
+            width: 380px;
+            max-width: 88vw;
+            height: 100%;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .modal.drawer-right.show .modal-dialog {
+            transform: translateX(0);
+        }
+
+        .modal-drawer-content {
+            height: 100%;
+            border: none;
+            border-radius: 32px 0 0 32px;
+            box-shadow: -10px 0 30px rgba(130, 110, 90, 0.08);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .drawer-header {
+            padding: 2rem 2rem 1rem 2rem;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .drawer-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        .btn-close-custom {
+            background: #f7fafc;
+            border: 1px solid #edf2f7;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #a0aec0;
+            transition: all 0.2s ease;
+        }
+
+        .btn-close-custom:hover {
+            background: #edf2f7;
+            color: #4a5568;
+        }
+
+        .drawer-body {
+            padding: 1rem 2rem 2rem 2rem;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        .clean-intro {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #718096;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Lista da Fauna com cards pastéis */
+        .fauna-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .fauna-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: #f7fbf7;
+            border-radius: 18px;
+            border: 1px solid #e8f5e9;
+            transition: all 0.2s ease;
+        }
+
+        .fauna-item:hover {
+            background: #e8f5e9;
+            transform: translateX(-3px);
+        }
+
+        .fauna-icon {
+            font-size: 1.4rem;
+            margin-right: 12px;
+        }
+
+        .fauna-name {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #2d6a4f;
+        }
+
+        /* Grid de Países Fofo */
+        .paises-clean-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pais-chip {
+            background: #fdf8f5;
+            border: 1px solid #f7ede2;
+            padding: 10px 12px;
+            border-radius: 14px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #7f5539;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .pais-chip:hover {
+            background: #f5ebe0;
+        }
+
+        .drawer-footer {
+            padding: 1.5rem 2rem;
+            border-top: 1px solid #f7fafc;
+        }
+
+        .btn-clean-action {
+            width: 100%;
+            padding: 12px;
+            border-radius: 18px;
+            font-weight: 500;
+            border: none;
+            background: #d8f3dc;
+            color: #2d6a4f;
+            transition: opacity 0.2s;
+        }
+
+        .btn-clean-action:hover {
+            background: #b7e4c7;
+        }
+
+        .btn-clean-brown {
+            background: #fbeee0;
+            color: #7f5539;
+        }
+
+        .btn-clean-brown:hover {
+            background: #ede0d4;
+        }
