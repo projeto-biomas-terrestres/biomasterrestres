@@ -1,0 +1,232 @@
+*{
+            font-family: 'Outfit', sans-serif;
+            color: #334155;
+            background-color: #f7f9f7;
+            min-height: 100vh;
+            margin: 0;
+            /* Margem no topo aumentada para descer a página */
+            padding: 120px 20px 60px 20px;
+        }
+
+        /* Layout em duas colunas (split) alinhado à esquerda */
+        .page-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+            .page-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        .left-content {
+            text-align: left;
+        }
+
+        .tag-selo {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            color: #1e293b;
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        p.descricao {
+            color: #64748b;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        /* Painel lateral direito com botões e detalhes */
+        .right-panel {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+        }
+
+        .panel-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .botoes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-acao {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            border-radius: 14px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        /* Botão 1: Verde Musgo Pastel */
+        .btn-camadas {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .btn-camadas:hover {
+            background-color: #bbf7d0;
+            transform: translateX(4px);
+        }
+
+        /* Botão 2: Azul Cinzento Murcho */
+        .btn-importancia {
+            background-color: #f1f5f9;
+            color: #334155;
+        }
+
+        .btn-importancia:hover {
+            background-color: #e2e8f0;
+            transform: translateX(4px);
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .btn-voltar:hover {
+            color: #475569;
+        }
+
+        /* --- MODAL: CANTO SUPERIOR DIREITO --- */
+        .modal.top-corner .modal-dialog {
+            position: fixed;
+            margin: 20px;
+            width: 380px;
+            max-width: calc(100vw - 40px);
+            top: 0;
+            right: 0;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .modal.top-corner.show .modal-dialog {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .modal-corner-content {
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+        }
+
+        .corner-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .corner-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        .btn-fechar {
+            background: #f1f5f9;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .corner-body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 1.2rem;
+        }
+
+        .item-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 10px 14px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .item-icon {
+            font-size: 1.2rem;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: #334155;
+            margin-bottom: 2px;
+        }
+
+        .item-desc {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .btn-confirmar {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .btn-confirmar:hover {
+            background: #e2e8f0;
+        }
