@@ -1,1 +1,54 @@
 /*Estilos da página/testando*/
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: "Poppins", sans-serif;
+background: linear-gradient(135deg, #eef8ee, #dff2df);
+color: #2d4739;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.container {
+text-align: center;
+background: white;
+padding: 50px;
+border-radius: 20px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+max-width: 650px;
+}
+
+header h1 {
+font-size: 2.8rem;
+color: #2e7d32;
+margin-bottom: 15px;
+}
+
+header p {
+font-size: 1.1rem;
+color: #555;
+margin-bottom: 35px;
+line-height: 1.6;
+}
+
+.botao {
+display: inline-block;
+text-decoration: none;
+background-color: #4caf50;
+color: white;
+padding: 14px 30px;
+border-radius: 30px;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.botao:hover {
+background-color: #388e3c;
+transform: translateY(-3px);
+}
