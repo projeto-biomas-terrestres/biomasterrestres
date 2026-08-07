@@ -1,0 +1,291 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg-color: #fdfbf7;           
+  --card-bg: #ffffff;           
+  --accent-color: #bc5a3d;      
+  --text-main: #231f20;         
+  --text-sub: #6e6761;          
+  --border-color: #eae5dc;      
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); 
+  --card-shadow-hover: 0 12px 30px rgba(188, 90, 61, 0.08);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 80px 24px 60px 24px;
+}
+
+.main-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.header-section {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.category-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent-color);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+p.lead-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-sub);
+  max-width: 640px;
+  margin: 0;
+  font-weight: 400;
+}
+
+
+.seasons-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .seasons-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.season-pill {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px 12px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+}
+
+.season-name {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.season-desc {
+  font-size: 0.75rem;
+  color: var(--text-sub);
+  margin-top: 2px;
+}
+
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--card-shadow);
+}
+
+.btn-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.btn-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.btn-card-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-sub);
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+.btn-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.btn-back-link:hover {
+  color: var(--accent-color);
+}
+
+
+.modal-drawer-content {
+  height: 100%;
+  border: none;
+  background: #ffffff;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+.modal.drawer-right .modal-dialog {
+  position: fixed; margin: 0; width: 400px; max-width: 88vw; height: 100%; right: 0; top: 0;
+  transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal.drawer-right.show .modal-dialog { transform: translateX(0); }
+.modal.drawer-right .modal-drawer-content { border-radius: 28px 0 0 28px; }
+
+.modal.drawer-left .modal-dialog {
+  position: fixed; margin: 0; width: 400px; max-width: 88vw; height: 100%; left: 0; top: 0;
+  transform: translateX(-100%); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal.drawer-left.show .modal-dialog { transform: translateX(0); }
+.modal.drawer-left .modal-drawer-content { border-radius: 0 28px 28px 0; }
+
+.modal.drawer-bottom .modal-dialog {
+  position: fixed; margin: 0; width: 100%; max-width: 100vw; height: auto; max-height: 80vh; left: 0; bottom: 0;
+  transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal.drawer-bottom.show .modal-dialog { transform: translateY(0); }
+.modal.drawer-bottom .modal-drawer-content { border-radius: 28px 28px 0 0; }
+
+.modal.drawer-top .modal-dialog {
+  position: fixed; margin: 0; width: 100%; max-width: 100vw; height: auto; max-height: 80vh; left: 0; top: 0;
+  transform: translateY(-100%); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal.drawer-top.show .modal-dialog { transform: translateY(0); }
+.modal.drawer-top .modal-drawer-content { border-radius: 0 0 28px 28px; }
+
+/* ESTRUTURA INTERNA DO MODAL */
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.8rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.drawer-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.btn-close-drawer {
+  background: var(--bg-color);
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--text-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-close-drawer:hover {
+  background: var(--border-color);
+}
+
+.drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.info-row {
+  background-color: var(--bg-color);
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.info-row-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.info-row-text {
+  font-size: 0.84rem;
+  color: var(--text-sub);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.drawer-footer {
+  margin-top: auto;
+  padding-top: 1.2rem;
+}
+
+.btn-drawer-close {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: var(--text-main);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-drawer-close:hover {
+  opacity: 0.9;
+}
