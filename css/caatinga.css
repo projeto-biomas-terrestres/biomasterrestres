@@ -1,0 +1,403 @@
+:root {
+  /* Paleta Caatinga Brutalista */
+  --bg-sand: #F7F0E6;
+  --terracotta: #D05A3F;
+  --terracotta-dark: #A83E26;
+  --sun-gold: #F2A900;
+  --cactus-green: #2B580C;
+  --ink-black: #1C1512;
+  --card-cream: #FFFDF9;
+  
+  --hard-shadow: 5px 5px 0px var(--ink-black);
+  --hard-shadow-hover: 8px 8px 0px var(--ink-black);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--ink-black);
+  background-color: var(--bg-sand);
+  min-height: 100vh;
+  margin: 0;
+  padding: 50px 20px;
+}
+
+.caatinga-layout {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+/* Hero Box Estilo Poster */
+.poster-hero {
+  background: var(--terracotta);
+  color: #FFFFFF;
+  padding: 3rem 2.5rem;
+  border: 3px solid var(--ink-black);
+  box-shadow: var(--hard-shadow);
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.tag-stamp {
+  display: inline-block;
+  background: var(--sun-gold);
+  color: var(--ink-black);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+  border: 2px solid var(--ink-black);
+  margin-bottom: 1.2rem;
+}
+
+.poster-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.poster-lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0;
+  color: #FFF3EB;
+}
+
+/* Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.bento-item {
+  background: var(--card-cream);
+  border: 3px solid var(--ink-black);
+  box-shadow: var(--hard-shadow);
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border-radius: 4px;
+}
+
+.bento-item.bento-accent {
+  background: #E8D9C5;
+}
+
+.bento-item.bento-sun {
+  background: var(--sun-gold);
+}
+
+.bento-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: var(--ink-black);
+  color: var(--bg-sand);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.bento-item h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.bento-item p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #4A3E38;
+}
+
+/* Cards de Ação Brutalistas */
+.brutalist-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 2.5rem;
+}
+
+.brutalist-card {
+  text-align: left;
+  padding: 28px;
+  border: 3px solid var(--ink-black);
+  box-shadow: var(--hard-shadow);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.card-terracotta {
+  background: var(--card-cream);
+}
+
+.card-cactus {
+  background: var(--cactus-green);
+  color: #FFFFFF;
+}
+
+.card-cactus .card-badge {
+  background: var(--sun-gold);
+  color: var(--ink-black);
+}
+
+.card-cactus p {
+  color: #E2F0D9;
+}
+
+.brutalist-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--hard-shadow-hover);
+}
+
+.card-badge {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--terracotta);
+  color: #FFF;
+  padding: 4px 8px;
+  border: 1.5px solid var(--ink-black);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.brutalist-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.brutalist-card p {
+  font-size: 0.88rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.card-arrow-btn {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+/* Footer Stamp */
+.caatinga-footer {
+  margin-top: 1rem;
+}
+
+.stamp-link {
+  display: inline-block;
+  background: var(--card-cream);
+  color: var(--ink-black);
+  border: 2px solid var(--ink-black);
+  box-shadow: 3px 3px 0px var(--ink-black);
+  padding: 10px 18px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.stamp-link:hover {
+  background: var(--sun-gold);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--ink-black);
+}
+
+/* ========================================================
+   MODAL 1: FULLSCREEN CURTAIN (CORTINA EM TELA CHEIA)
+   ======================================================== */
+.modal-fullscreen-curtain .modal-content {
+  background: var(--terracotta);
+  color: #FFFFFF;
+  padding: 3rem 10%;
+  border: none;
+}
+
+.curtain-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 3px solid var(--ink-black);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.curtain-tag {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--sun-gold);
+  color: var(--ink-black);
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border: 2px solid var(--ink-black);
+}
+
+.curtain-header h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.btn-close-curtain {
+  background: var(--ink-black);
+  color: #FFF;
+  border: 2px solid #FFF;
+  padding: 10px 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.curtain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.curtain-card {
+  background: var(--card-cream);
+  color: var(--ink-black);
+  border: 3px solid var(--ink-black);
+  box-shadow: 6px 6px 0px var(--ink-black);
+  padding: 24px;
+  border-radius: 4px;
+}
+
+.curtain-emoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.curtain-card h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.curtain-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4A3E38;
+}
+
+.curtain-footer {
+  margin-top: 3rem;
+}
+
+.btn-curtain-action {
+  background: var(--sun-gold);
+  color: var(--ink-black);
+  border: 3px solid var(--ink-black);
+  box-shadow: 4px 4px 0px var(--ink-black);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  padding: 14px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ========================================================
+   MODAL 2: OFFSET POP CARD (INCLINADO COM SOMBRA RÍGIDA)
+   ======================================================== */
+.modal-offset-pop .modal-dialog {
+  max-width: 480px;
+}
+
+.offset-card-content {
+  background: var(--card-cream);
+  border: 4px solid var(--ink-black);
+  box-shadow: 12px 12px 0px var(--ink-black);
+  border-radius: 0;
+  padding: 2rem;
+  transform: rotate(-1deg);
+}
+
+.offset-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--ink-black);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.offset-header h5 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.btn-offset-close {
+  background: var(--terracotta);
+  color: #FFF;
+  border: 2px solid var(--ink-black);
+  width: 32px;
+  height: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.topic-block {
+  background: #F0E6D8;
+  border: 2px solid var(--ink-black);
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.topic-block strong {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 4px;
+}
+
+.topic-block p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #4A3E38;
+}
+
+.btn-offset-primary {
+  width: 100%;
+  background: var(--cactus-green);
+  color: #FFF;
+  border: 3px solid var(--ink-black);
+  padding: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px var(--ink-black);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .bento-grid, .brutalist-actions, .curtain-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-title {
+    font-size: 2.6rem;
+  }
+
+  .modal-fullscreen-curtain .modal-content {
+    padding: 2rem 5%;
+  }
+}
