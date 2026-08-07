@@ -3,154 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cerrado 🌳✨</title>
+  <title>Cerrado 🌿</title>
   
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   
-  <!-- Fontes Google estilo Cartoon / HQ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">   
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"> 
 
-  <!-- CSS Separado -->
   <link rel="stylesheet" href="../css/cerrado.css">
 </head>
 <body>
 
-  <!-- Elementos decorativos flutuantes (nuvens estilo desenho) -->
-  <div class="cloud cloud-1">☁️</div>
-  <div class="cloud cloud-2">☁️</div>
-
-  <main class="cartoon-wrapper">
+  <main class="main-wrapper">
     
-    <!-- Hero Box Cartoon -->
-    <header class="cartoon-hero">
-      <div class="hero-badge">🌟 O Berço das Águas</div>
-      <h1 class="hero-title">Cerrado! 🌳</h1>
-      <p class="hero-lead">Árvores de galhos retorcidos, cascata de rios, ipês coloridos e a savana mais biodiversa de todas!</p>
+    <header class="hero-header">
+      <span class="category-badge">Savana Brasileira</span>
+      <h1 class="hero-title">Cerrado 🌿</h1>
+      <p class="hero-lead">
+        Conhecido como a caixa d'água do Brasil, abriga árvores de troncos retorcidos, uma rica vegetação e uma das maiores biodiversidades do planeta.
+      </p>
     </header>
 
-    <!-- Pílulas Animadas -->
-    <section class="cartoon-pills">
-      <div class="pill-item pill-yellow">
-        <span class="pill-emoji">🌳</span>
+    <section class="info-pills">
+      <div class="pill-card">
+        <span class="pill-icon">🌳</span>
         <div>
           <strong>Troncos Retorcidos</strong>
-          <small>Adaptação do fogo</small>
+          <small>Adaptação ao fogo natural</small>
         </div>
       </div>
-      <div class="pill-item pill-orange">
-        <span class="pill-emoji">🌸</span>
+
+      <div class="pill-card">
+        <span class="pill-icon">🌸</span>
         <div>
           <strong>Ipês Floridos</strong>
-          <small>Explosão de cores</small>
+          <small>Floração sazonal marcante</small>
         </div>
       </div>
-      <div class="pill-item pill-green">
-        <span class="pill-emoji">🌊</span>
+
+      <div class="pill-card">
+        <span class="pill-icon">🌊</span>
         <div>
-          <strong>Caixa D'Água</strong>
-          <small>Nascentes principais</small>
+          <strong>Berço das Águas</strong>
+          <small>Nascentes essenciais</small>
         </div>
       </div>
     </section>
 
-    <!-- Grid de Botões/Cards Cartoon -->
-    <section class="cartoon-cards-grid">
+    <section class="actions-grid">
       
-      <!-- Card 1: Pop-Up Bouncy -->
-      <div class="sticker-card card-purple" data-bs-toggle="modal" data-bs-target="#modalBouncy">
-        <div class="sticker-tag">BICHOS E PLANTAS</div>
-        <h2>Fauna & Flora 🐺</h2>
-        <p>Lobo-guará, tamanduá-bandeira, pequi e ipês!</p>
-        <div class="btn-pop">Clique para ver! ✨</div>
+      <div class="clean-card" data-bs-toggle="modal" data-bs-target="#modalFaunaFlora">
+        <div class="card-content">
+          <span class="card-tag">BIODIVERSIDADE</span>
+          <h2>Fauna & Flora 🐺</h2>
+          <p>Lobo-guará, tamanduá-bandeira, frutos nativos como o pequi e os ipês.</p>
+        </div>
+        <div class="card-action">
+          <span class="action-link">Ver detalhes →</span>
+        </div>
       </div>
 
-      <!-- Card 2: Sketchbook / Lousa -->
-      <div class="sticker-card card-blue" data-bs-toggle="modal" data-bs-target="#modalSketch">
-        <div class="sticker-tag">SEGREDO DO BIOMA</div>
-        <h2>Berço das Águas 💧</h2>
-        <p>Por que o Cerrado alimenta grandes bacias de rios?</p>
-        <div class="btn-pop">Descobrir agora! 🌊</div>
+      <div class="clean-card" data-bs-toggle="modal" data-bs-target="#modalAguas">
+        <div class="card-content">
+          <span class="card-tag">RECURSOS HÍDRICOS</span>
+          <h2>Caixa D'Água 💧</h2>
+          <p>Entenda por que o bioma é fundamental para as maiores bacias do país.</p>
+        </div>
+        <div class="card-action">
+          <span class="action-link">Descobrir mais →</span>
+        </div>
       </div>
 
     </section>
 
-    <!-- Botão Voltar Estilo Botão de Jogo -->
-    <footer class="cartoon-footer">
-      <a href="biomas.html" class="btn-cartoon-back">
-        👈 Voltar aos Biomas
+    <footer class="footer-section">
+      <a href="biomas.html" class="btn-back">
+        ← Voltar para Biomas
       </a>
     </footer>
 
   </main>
 
-  <!-- MODAL 1: POP-UP BOUNCY (ESTILO ADESIVO / DESENHO) -->
-  <div class="modal fade modal-bouncy" id="modalBouncy" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="modalFaunaFlora" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bouncy-content">
-        <div class="bouncy-header">
-          <span class="bouncy-badge">🐾 Turma da Floresta</span>
-          <h3>Biodiversidade do Cerrado</h3>
-          <button type="button" class="btn-cartoon-close" data-bs-dismiss="modal">✕</button>
+      <div class="modal-content clean-modal-content">
+        <div class="modal-header-clean">
+          <div>
+            <span class="modal-subtitle">ESPECIES NATIVAS</span>
+            <h3 class="modal-title-clean">Fauna & Flora do Cerrado</h3>
+          </div>
+          <button type="button" class="btn-close-modal" data-bs-dismiss="modal">✕</button>
         </div>
-        <div class="bouncy-body">
-          <div class="toon-item">
-            <span class="toon-icon">🐺</span>
+        
+        <div class="modal-body-clean">
+          <div class="info-item">
+            <span class="item-emoji">🐺</span>
             <div>
-              <h5>Lobo-Guará</h5>
-              <p>O "gigante tímido" de pernas longas que adora comer a fruta fruto-do-lobo!</p>
+              <h4>Lobo-Guará</h4>
+              <p>O maior canídeo da América do Sul. De hábitos solitários, alimenta-se de pequenos animais e frutos locais.</p>
             </div>
           </div>
-          <div class="toon-item">
-            <span class="toon-icon">🐜</span>
+
+          <div class="info-item">
+            <span class="item-emoji">🐜</span>
             <div>
-              <h5>Tamanduá-Bandeira</h5>
-              <p>Usa sua língua gigante para saborear milhares de formigas por dia!</p>
+              <h4>Tamanduá-Bandeira</h4>
+              <p>Especialista em capturar formigas e cupins com sua língua longa e garras adaptadas.</p>
             </div>
           </div>
-          <div class="toon-item">
-            <span class="toon-icon">🍈</span>
+
+          <div class="info-item">
+            <span class="item-emoji">🍈</span>
             <div>
-              <h5>Fruta Pequi</h5>
-              <p>O Ouro Amarelo do Cerrado, super saboroso mas cheio de espinhos por dentro!</p>
+              <h4>Pequi</h4>
+              <p>Fruto de sabor marcante e símbolo cultural do Cerrado, rico em óleos e vitaminas.</p>
             </div>
           </div>
         </div>
-        <div class="bouncy-footer">
-          <button type="button" class="btn-toon-primary" data-bs-dismiss="modal">Muito legal! 🎉</button>
+
+        <div class="modal-footer-clean">
+          <button type="button" class="btn-primary-clean" data-bs-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MODAL 2: LOUSA SKETCHBOOK (CORTINA COLORIDA DE TOPO) -->
-  <div class="modal fade modal-sketchbook" id="modalSketch" tabindex="-1" aria-hidden="true">
+  <div class="modal fade drawer-bottom" id="modalAguas" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content sketch-content">
-        <div class="sketch-header">
-          <h3>💧 O Caixão D'Água do Brasil</h3>
-          <button type="button" class="btn-cartoon-close" data-bs-dismiss="modal">✕</button>
-        </div>
-        <div class="sketch-body">
-          <div class="sketch-card">
-            <h4>🧠 "A Floresta de Cabeça para Baixo"</h4>
-            <p>As raízes das árvores do Cerrado são tão gigantes fundas que funcionam como esponjas secretas, guardando a água das chuvas no solo!</p>
+      <div class="modal-content drawer-content-clean">
+        <div class="modal-header-clean">
+          <div>
+            <span class="modal-subtitle">HIDROGRAFIA</span>
+            <h3 class="modal-title-clean">A Caixa D'Água do Brasil</h3>
           </div>
-          <div class="sketch-card">
-            <h4>🏞️ Nascentes Importantes</h4>
-            <p>De lá saem as águas que formam grandes rios brasileiros como o São Francisco e o Tocantins!</p>
+          <button type="button" class="btn-close-modal" data-bs-dismiss="modal">✕</button>
+        </div>
+
+        <div class="modal-body-clean">
+          <div class="feature-card">
+            <h4>"Floresta de Cabeça para Baixo"</h4>
+            <p>Devido às raízes profundas de suas árvores, o solo do Cerrado atua como uma grande esponja, absorvendo e armazenando água da chuva para os aquíferos subterráneos.</p>
+          </div>
+
+          <div class="feature-card">
+            <h4>Alimentação de Bacias Hídricas</h4>
+            <p>O Cerrado abriga nascentes de 8 das 12 principais bacias hidrográficas brasileiras, incluindo as do São Francisco, Araguaia e Tocantins.</p>
           </div>
         </div>
-        <div class="sketch-footer">
-          <button type="button" class="btn-toon-secondary" data-bs-dismiss="modal">Entendi tudo! 🧠</button>
+
+        <div class="modal-footer-clean">
+          <button type="button" class="btn-primary-clean" data-bs-dismiss="modal">Entendido</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- JS Bootstrap 5 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
