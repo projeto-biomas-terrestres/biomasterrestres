@@ -1,5 +1,3 @@
-# biomasterrestres
-10 Biomas Terrestres
 
 # 🌍 Biomas do Mundo
 
