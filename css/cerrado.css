@@ -1,0 +1,392 @@
+
+:root {
+  /* Paleta Cartoon Vibrante */
+  --bg-cartoon: #FFF9E6;
+  --main-orange: #FF5722;
+  --main-yellow: #FFC107;
+  --main-green: #7CB342;
+  --main-purple: #9C27B0;
+  --main-blue: #03A9F4;
+  --dark-ink: #2D2424;
+  
+  --cartoon-border: 4px solid var(--dark-ink);
+  --cartoon-shadow: 0px 8px 0px var(--dark-ink);
+  --cartoon-shadow-small: 0px 4px 0px var(--dark-ink);
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--dark-ink);
+  background-color: var(--bg-cartoon);
+  min-height: 100vh;
+  margin: 0;
+  padding: 50px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Nuvens decorativas flutuantes */
+.cloud {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.5;
+  pointer-events: none;
+  animation: floatCloud 6s ease-in-out infinite alternate;
+}
+.cloud-1 { top: 20px; left: 5%; }
+.cloud-2 { top: 60px; right: 8%; animation-delay: -3s; }
+
+@keyframes floatCloud {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.cartoon-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Hero Box */
+.cartoon-hero {
+  background: var(--main-yellow);
+  border: var(--cartoon-border);
+  box-shadow: var(--cartoon-shadow);
+  border-radius: 35px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--main-orange);
+  color: #FFF;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.9rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: var(--cartoon-border);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-ink);
+  margin-bottom: 0.8rem;
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.6;
+  margin: 0;
+  color: #4E342E;
+}
+
+/* Pílulas Cartoon */
+.cartoon-pills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.pill-item {
+  border: var(--cartoon-border);
+  box-shadow: var(--cartoon-shadow-small);
+  border-radius: 25px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFF;
+}
+
+.pill-yellow { background: #FFF59D; }
+.pill-orange { background: #FFCC80; }
+.pill-green { background: #C5E1A5; }
+
+.pill-emoji {
+  font-size: 1.8rem;
+}
+
+.pill-item strong {
+  display: block;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.95rem;
+}
+
+.pill-item small {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #616161;
+}
+
+/* Grid de Cards Sticker */
+.cartoon-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 2.5rem;
+}
+
+.sticker-card {
+  border: var(--cartoon-border);
+  box-shadow: var(--cartoon-shadow);
+  border-radius: 30px;
+  padding: 28px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.card-purple { background: #E1BEE7; }
+.card-blue { background: #B3E5FC; }
+
+.sticker-card:hover {
+  transform: translateY(-8px) scale(1.02) rotate(1deg);
+}
+
+.sticker-tag {
+  display: inline-block;
+  background: #FFF;
+  border: var(--cartoon-border);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.sticker-card h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.sticker-card p {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #37474F;
+  margin-bottom: 1.5rem;
+}
+
+.btn-pop {
+  display: inline-block;
+  background: var(--dark-ink);
+  color: #FFF;
+  font-family: 'Fredoka', sans-serif;
+  padding: 8px 16px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+}
+
+/* Botão Voltar */
+.cartoon-footer {
+  text-align: left;
+}
+
+.btn-cartoon-back {
+  display: inline-block;
+  background: #FFF;
+  color: var(--dark-ink);
+  border: var(--cartoon-border);
+  box-shadow: var(--cartoon-shadow-small);
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-cartoon-back:hover {
+  background: var(--main-yellow);
+  transform: translateY(-3px);
+  box-shadow: var(--cartoon-shadow);
+  color: var(--dark-ink);
+}
+
+/* ========================================================
+   MODAL 1: POP-UP BOUNCY (ADESIVO INTERATIVO)
+   ======================================================== */
+.modal-bouncy .modal-dialog {
+  max-width: 480px;
+}
+
+.modal-bouncy.fade .modal-dialog {
+  transform: scale(0.5);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-bouncy.show .modal-dialog {
+  transform: scale(1);
+}
+
+.bouncy-content {
+  background: #FFF;
+  border: var(--cartoon-border);
+  box-shadow: 0px 12px 0px var(--dark-ink);
+  border-radius: 35px;
+  padding: 2rem;
+}
+
+.bouncy-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.bouncy-badge {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--main-purple);
+  font-size: 0.85rem;
+}
+
+.bouncy-header h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.btn-cartoon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #FFCDD2;
+  border: var(--cartoon-border);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.toon-item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: #F5F5F5;
+  border: 3px solid var(--dark-ink);
+  border-radius: 20px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.toon-icon {
+  font-size: 2rem;
+}
+
+.toon-item h5 {
+  font-family: 'Fredoka', sans-serif;
+  margin: 0 0 2px 0;
+}
+
+.toon-item p {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #616161;
+}
+
+.btn-toon-primary {
+  width: 100%;
+  background: var(--main-green);
+  color: #FFF;
+  border: var(--cartoon-border);
+  box-shadow: var(--cartoon-shadow-small);
+  padding: 14px;
+  border-radius: 20px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ========================================================
+   MODAL 2: LOUSA SKETCHBOOK (SLIDE DOWN TOP)
+   ======================================================== */
+.modal-sketchbook .modal-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 550px;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-sketchbook.show .modal-dialog {
+  transform: translateY(20px);
+}
+
+.sketch-content {
+  background: #E0F7FA;
+  border: var(--cartoon-border);
+  box-shadow: 0px 12px 0px var(--dark-ink);
+  border-radius: 0 0 35px 35px;
+  padding: 2rem;
+}
+
+.sketch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sketch-header h3 {
+  font-family: 'Fredoka', sans-serif;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.sketch-card {
+  background: #FFF;
+  border: 3px solid var(--dark-ink);
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.sketch-card h4 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.1rem;
+  color: var(--main-blue);
+  margin-bottom: 6px;
+}
+
+.sketch-card p {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin: 0;
+  color: #455A64;
+}
+
+.btn-toon-secondary {
+  width: 100%;
+  background: var(--main-orange);
+  color: #FFF;
+  border: var(--cartoon-border);
+  box-shadow: var(--cartoon-shadow-small);
+  padding: 12px;
+  border-radius: 20px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cartoon-pills, .cartoon-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
